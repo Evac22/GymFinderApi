@@ -1,4 +1,4 @@
-﻿namespace GymFinderApi.Domain.Comment;
+﻿namespace GymFinderApi.Domain.Comments;
 
 public class Comment
 {
