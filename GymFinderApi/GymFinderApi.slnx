@@ -1,6 +1,12 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/GymFinderApi.Domain/GymFinderApi.Domain.csproj" />
+  <Folder Name="/Solition Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
   </Folder>
-  <Project Path="GymFinderApi/GymFinderApi.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/GymFinderApi.Contracts/GymFinderApi.Contracts.csproj" Id="98b9ccfa-0db7-41ae-a5a5-4fd67bfd9ad6" />
+    <Project Path="src/GymFinderApi.Domain/GymFinderApi.Domain.csproj" />
+    <Project Path="src/GymFinderApi.Presenters/GymFinderApi.Presenters.csproj" Id="8b46dfb9-b86f-44f4-b58b-11c356f92106" />
+    <Project Path="src/GymFinderApi.Web/GymFinderApi.Web.csproj" Id="4dec2bb5-106f-4bc4-a2b9-a0cd78274fec" />
+  </Folder>
 </Solution>
