@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymFinderApi.Application\GymFinderApi.Application.csproj" />
+    <ProjectReference Include="..\GymFinderApi.Contracts\GymFinderApi.Contracts.csproj" />
+    <ProjectReference Include="..\GymFinderApi.Domain\GymFinderApi.Domain.csproj" />
+    <ProjectReference Include="..\GymFinderApi.Presenters\GymFinderApi.Presenters.csproj" />
+  </ItemGroup>
+
+</Project>
