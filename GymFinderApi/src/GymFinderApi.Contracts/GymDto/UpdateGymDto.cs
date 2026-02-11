@@ -1,4 +1,4 @@
-﻿namespace GymFinderApi.Contracts
+﻿namespace GymFinderApi.Contracts.GymDto
 {
  public record UpdateGymDto(string Name, string Description,
     string Address, string Schedule);

@@ -4,6 +4,7 @@
     <File Path="Directory.Build.props" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/GymFinderApi.Application/GymFinderApi.Application.csproj" Id="ffdc4446-d006-4acb-8c7e-40118a37ffaa" />
     <Project Path="src/GymFinderApi.Contracts/GymFinderApi.Contracts.csproj" Id="98b9ccfa-0db7-41ae-a5a5-4fd67bfd9ad6" />
     <Project Path="src/GymFinderApi.Domain/GymFinderApi.Domain.csproj" />
     <Project Path="src/GymFinderApi.Presenters/GymFinderApi.Presenters.csproj" Id="8b46dfb9-b86f-44f4-b58b-11c356f92106" />

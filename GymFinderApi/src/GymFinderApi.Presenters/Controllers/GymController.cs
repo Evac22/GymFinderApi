@@ -1,4 +1,4 @@
-﻿using GymFinderApi.Contracts;
+﻿using GymFinderApi.Contracts.GymDto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GymFinderApi.Presenters.Controllers;
@@ -8,13 +8,13 @@ namespace GymFinderApi.Presenters.Controllers;
 public class GymController : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateGymDTO request)
+    public async Task<IActionResult> Create([FromBody] CreateGymDTO request, CancellationToken cancellationToken)
     {
         return Ok("Gym created");
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] GetGymDto request)
+    public async Task<IActionResult> Get([FromQuery] GetGymDto request, CancellationToken cancellationToken)
     {
         return Ok("All gyms in Kiev");
     }
@@ -26,7 +26,10 @@ public class GymController : ControllerBase
     }
 
     [HttpPut("{gymId:guid}")]
-    public async Task<IActionResult> Update([FromRoute] Guid gymId, [FromBody] UpdateGymDto request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Update(
+        [FromRoute] Guid gymId,
+        [FromBody] UpdateGymDto request,
+        CancellationToken cancellationToken)
     {
         return Ok("Gym updated");
     }

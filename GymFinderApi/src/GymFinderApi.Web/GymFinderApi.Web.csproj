@@ -17,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GymFinderApi.Application\GymFinderApi.Application.csproj" />
+    <ProjectReference Include="..\GymFinderApi.Contracts\GymFinderApi.Contracts.csproj" />
     <ProjectReference Include="..\GymFinderApi.Domain\GymFinderApi.Domain.csproj" />
     <ProjectReference Include="..\GymFinderApi.Presenters\GymFinderApi.Presenters.csproj" />
   </ItemGroup>
