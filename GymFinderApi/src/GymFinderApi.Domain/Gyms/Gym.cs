@@ -2,6 +2,21 @@
 
 public class Gym
 {
+    public Gym(
+        Guid id,
+        string name,
+        string description,
+        string city,
+        string address,
+        string schedule)
+    {
+        this.Id = id;
+        this.Name = name;
+        this.Description = description;
+        this.City = city;
+        this.Address = address;
+    }
+
     public Guid Id { get; set; }
 
     public string Name { get; set; } = string.Empty;

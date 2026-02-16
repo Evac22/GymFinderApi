@@ -1,4 +1,5 @@
-﻿using GymFinderApi.Contracts.GymDto;
+﻿using GymFinderApi.Application.Gyms;
+using GymFinderApi.Contracts.GymDto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GymFinderApi.Presenters.Controllers;
@@ -7,10 +8,18 @@ namespace GymFinderApi.Presenters.Controllers;
 [Route("[controller]")]
 public class GymController : ControllerBase
 {
+    private readonly IGymsService _gymsService;
+
+    public GymController(IGymsService gymsService)
+    {
+        _gymsService = gymsService;
+    }
+
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateGymDTO request, CancellationToken cancellationToken)
     {
-        return Ok("Gym created");
+        var gymId = await _gymsService.Create(request, cancellationToken);
+        return Ok(gymId);
     }
 
     [HttpGet]
