@@ -1,7 +1,4 @@
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+﻿var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
@@ -13,4 +10,4 @@ if(app.Environment.IsDevelopment())
 
 app.MapControllers();
 
- app.Run();
+app.Run();

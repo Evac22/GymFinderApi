@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GymFinderApi.Contracts\GymFinderApi.Contracts.csproj" />
     <ProjectReference Include="..\GymFinderApi.Domain\GymFinderApi.Domain.csproj" />
   </ItemGroup>
