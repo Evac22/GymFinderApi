@@ -10,6 +10,6 @@
 
         Task<Guid> DeleteAsync(Guid gymId, CancellationToken cancellationToken);
 
-        Task<Gym> GetByIdAsync(Guid gymId, CancellationToken cancellationToken);
+        Task<Gym?> GetByIdAsync(Guid gymId, CancellationToken cancellationToken);
     }
 }

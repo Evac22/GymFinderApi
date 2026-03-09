@@ -7,6 +7,9 @@
     <Project Path="src/GymFinderApi.Application/GymFinderApi.Application.csproj" Id="ffdc4446-d006-4acb-8c7e-40118a37ffaa" />
     <Project Path="src/GymFinderApi.Contracts/GymFinderApi.Contracts.csproj" Id="98b9ccfa-0db7-41ae-a5a5-4fd67bfd9ad6" />
     <Project Path="src/GymFinderApi.Domain/GymFinderApi.Domain.csproj" />
+    <Project Path="src/GymFinderApi.Infrastructure.ElasticSearch/GymFinderApi.Infrastructure.ElasticSearch.csproj" Id="df8f080b-1b42-46dc-867f-89da465cc6a8" />
+    <Project Path="src/GymFinderApi.Infrastructure.Postgres/GymFinderApi.Infrastructure.Postgres.csproj" Id="121d727b-9248-4d64-bbff-5b8364356c44" />
+    <Project Path="src/GymFinderApi.Infrastructure.S3/GymFinderApi.Infrastructure.S3.csproj" Id="b9323513-47f9-4de8-b15f-313b7fb0619c" />
     <Project Path="src/GymFinderApi.Presenters/GymFinderApi.Presenters.csproj" Id="8b46dfb9-b86f-44f4-b58b-11c356f92106" />
     <Project Path="src/GymFinderApi.Web/GymFinderApi.Web.csproj" Id="4dec2bb5-106f-4bc4-a2b9-a0cd78274fec" />
   </Folder>

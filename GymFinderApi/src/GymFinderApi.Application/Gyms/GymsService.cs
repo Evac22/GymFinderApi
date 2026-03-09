@@ -1,12 +1,14 @@
 ﻿namespace GymFinderApi.Application.Gyms
 {
     using FluentValidation;
+    using GymFinderApi.Application.FulltextSeatch;
     using GymFinderApi.Contracts.GymDto;
     using GymFinderApi.Domain.Gyms;
     using Microsoft.Extensions.Logging;
 
     public class GymsService : IGymsService
     {
+        private readonly ISearchProvider _searchProvider;
         private readonly IGymsRepository _gymsRepository;
         private readonly ILogger<GymsService> _logger;
         private readonly IValidator<CreateGymDTO> _validator;
@@ -14,11 +16,13 @@
         public GymsService(
             IGymsRepository gymsRepository,
             ILogger<GymsService> logger,
-            IValidator<CreateGymDTO> validator)
+            IValidator<CreateGymDTO> validator,
+            ISearchProvider searchProvider)
         {
-            this._gymsRepository = gymsRepository;
-            this._logger = logger;
-            this._validator = validator;
+            _gymsRepository = gymsRepository;
+            _logger = logger;
+            _validator = validator;
+            _searchProvider = searchProvider;
         }
 
         public async Task<Guid> Create(CreateGymDTO gymDTO, CancellationToken cancellationToken)
@@ -33,6 +37,7 @@
                 throw new ValidationException(validationResult.Errors);
             }
 
+            var existedGym = await _gymsRepository.GetByIdAsync(Guid.Empty, cancellationToken);
             // создание сущности Gym
             var gymId = Guid.NewGuid();
 
@@ -46,7 +51,7 @@
 
             // сохранение в базу данных
             await _gymsRepository.AddAsync(gym, cancellationToken);
-
+            await _searchProvider.IndexGymAsync(gym);
             // логирование операции
             _logger.LogInformation("Gym created with ID: {GymId}", gymId);
             return gymId;
