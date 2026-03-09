@@ -1,4 +1,9 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using GymFinderApi.Web;
+using GymFinderApi.Web.Seeders;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddProgramDependencies();
 
 var app = builder.Build();
 
